@@ -11,12 +11,12 @@ import {
     CardImage,
 } from './Catalog.styled';
 
-import a1 from '../../../components/icons/src/a1.svg';
-import a2 from '../../../components/icons/src/a2.svg';
-import a3 from '../../../components/icons/src/a3.svg';
-import a4 from '../../../components/icons/src/a4.svg';
-import a5 from '../../../components/icons/src/a5.svg';
-import a6 from '../../../components/icons/src/a6.svg';
+import a1 from '../../../components/icons/src/Catalog/a1.svg';
+import a2 from '../../../components/icons/src/Catalog/a2.svg';
+import a3 from '../../../components/icons/src/Catalog/a3.svg';
+import a4 from '../../../components/icons/src/Catalog/a4.svg';
+import a5 from '../../../components/icons/src/Catalog/a5.svg';
+import a6 from '../../../components/icons/src/Catalog/a6.svg';
 
 const items = [
     { title: "Люстры", img: a1 },
