@@ -22,6 +22,10 @@ export const ProductButton = styled.button`
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+
+    &:hover {
+        background: #f5f5f5;
+    }
 `;
 
 export const ProductGrid = styled.div`
@@ -39,6 +43,14 @@ export const ProductCard = styled.div`
     padding: 12px;
     border-radius: 8px;
     background: #fff;
+
+    // animatsiya uchun
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); //5 foiz kattalashtiradi
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15); // yumshoq soya
+    }
 `;
 
 export const ProductImage = styled.img`

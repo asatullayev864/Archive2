@@ -23,6 +23,10 @@ export const CatalogButton = styled.button`
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+
+    &:hover {
+        background: #f5f5f5;
+    }
 `;
 
 export const CatalogGrid = styled.div`
@@ -35,11 +39,18 @@ export const CatalogCard = styled.div`
     background: #f5f5f5;
     border-radius:  25px;
     padding: 20px;
-
     height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    // animatsiya
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); // 5 foiz kattalashadi
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); // yumshoq soya
+    }
 `;
 
 export const CardTitle = styled.p`

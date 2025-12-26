@@ -7,8 +7,9 @@ import Banner from './Layoutbar/Banner';
 import Catalog from './Layoutbar/Catalog';
 import WhyUs from './Layoutbar/WhyUs';
 import Product from './Layoutbar/Products';
-// import Brands from './Layoutbar/Brands';
-// import Blog from './Layoutbar/Blog';
+import Brands from './Layoutbar/Brands';
+import Blog from './Layoutbar/Blog';
+import Lighting from './Layoutbar/Lighting';
 
 function MainLayout(props) {
 
@@ -20,6 +21,9 @@ function MainLayout(props) {
                 <Catalog />
                 <WhyUs />
                 <Product />
+                <Brands />
+                <Blog />
+                <Lighting />
             </div>
             <Footer />
         </LayoutWrapper>

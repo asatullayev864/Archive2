@@ -23,6 +23,10 @@ export const WhyUsButton = styled.button`
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
+
+    &:hover {
+        background: #f5f5f5;
+    }
 `;
 
 export const WhyUsGrid = styled.div`
