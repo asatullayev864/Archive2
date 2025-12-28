@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import {
     WhyUsMobileButton,
     WhyUsSection,
@@ -45,9 +47,13 @@ function WhyUs() {
         <WhyUsSection>
             <WhyUsHeader>
                 <WhyUsTitle>Почему NORNLIGHT?</WhyUsTitle>
-                <WhyUsButton className="desktop-button">
+                <WhyUsButton
+                    as={Link}
+                    to="/about"
+                    className="desktop-button">
                     О компании →
                 </WhyUsButton>
+
 
             </WhyUsHeader>
 
@@ -68,8 +74,11 @@ function WhyUs() {
             </WhyUsGrid>
 
             <WhyUsMobileButton>
-                <WhyUsButton>О компании →</WhyUsButton>
+                <WhyUsButton as={Link} to="/about">
+                    О компании →
+                </WhyUsButton>
             </WhyUsMobileButton>
+
         </WhyUsSection>
     );
 }

@@ -1,13 +1,20 @@
 import React from 'react';
 import MainLayout from './layout/MainLayout';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import CatalogPage from './pages/Catalog/CatalogPage';
+import About from './pages/WhyUs/WhyUs';
 
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<MainLayout>
-        <h1>Hello World</h1>
-      </MainLayout>} />
+      <Route path="/" element={<MainLayout />}>
+        
+        <Route index element={<Home />} />
+        <Route path="catalog" element={<CatalogPage />} />
+        <Route path="about" element={<About />} />
+
+      </Route>
     </Routes>
   );
 }

@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import {
     CatalogSection,
     CatalogHeader,
@@ -12,12 +14,12 @@ import {
     CardImage,
 } from './Catalog.styled';
 
-import a1 from '../../../components/icons/src/Catalog/a1.svg';
-import a2 from '../../../components/icons/src/Catalog/a2.svg';
-import a3 from '../../../components/icons/src/Catalog/a3.svg';
-import a4 from '../../../components/icons/src/Catalog/a4.svg';
-import a5 from '../../../components/icons/src/Catalog/a5.svg';
-import a6 from '../../../components/icons/src/Catalog/a6.svg';
+import a1 from '../../../components/icons/src/Catalog/lyustra.svg';
+import a2 from '../../../components/icons/src/Catalog/svetilnik.svg';
+import a3 from '../../../components/icons/src/Catalog/bra.svg';
+import a4 from '../../../components/icons/src/Catalog/torsheri.svg';
+import a5 from '../../../components/icons/src/Catalog/stolni_lamps.svg';
+import a6 from '../../../components/icons/src/Catalog/spots.svg';
 
 const items = [
     { title: "Люстры", img: a1 },
@@ -29,11 +31,15 @@ const items = [
 ]
 
 function Catalog() {
+    const navigate = useNavigate();
+    
     return (
         <CatalogSection>
             <CatalogHeader>
                 <CatalogTitle>Каталог</CatalogTitle>
-                <CatalogButton>Весь каталог →</CatalogButton>
+                <CatalogButton onClick={() => navigate("/catalog")}>
+                    Весь каталог →
+                </CatalogButton>
             </CatalogHeader>
 
             <CatalogGrid>
@@ -47,7 +53,9 @@ function Catalog() {
             </CatalogGrid>
 
             <CatalogMobileButton>
-                <button>Весь каталог →</button>
+                <button onClick={() => navigate("/catalog")}>
+                    Весь каталог →
+                </button>
             </CatalogMobileButton>
 
         </CatalogSection>
