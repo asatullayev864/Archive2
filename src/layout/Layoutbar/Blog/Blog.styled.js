@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const BlogSection = styled.section`
     padding: 50px 225px;
+
+    @media(max-width: 768px) {
+        padding: 24px 16px;
+    }
 `;
 
 export const BlogHeader = styled.div`
@@ -9,23 +13,22 @@ export const BlogHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 24px;
+    }
 `;
 
-export const BlogTitle = styled.div`
+export const BlogTitle = styled.h2`
     font-size: 30px;
     font-weight: 600;
-`;
 
-export const BlogButton = styled.button`
-    padding: 10px 18px;
-    border-radius: 24px;
-    border: 1px solid #ccc;
-    background: white;
-    cursor: pointer;
-    font-weight: 500;
-
-    &:hover {
-        background: #f5f5f5;
+    @media(max-width: 768px) {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 16px;
     }
 `;
 
@@ -34,23 +37,23 @@ export const BlogGrid = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
-    @media (max-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 600px) {
+    @media(max-width: 768px) {
         grid-template-columns: 1fr;
+        gap: 16px;
+
+        & > *:not(:first-child) {
+            display: none;
+        }
     }
 `;
 
 export const BlogCard = styled.div`
     position: relative;
     cursor: pointer;
-    transition: 0.2s ease;
     display: flex;
     flex-direction: column;
-
     padding-bottom: 16px;
+    transition: transform 0.2s ease;
 
     img {
         width: 100%;
@@ -62,7 +65,6 @@ export const BlogCard = styled.div`
         transform: translateY(-4px);
     }
 
-    // To'g'ri chiziq qoshish
     &::after {
         content: "";
         position: absolute;
@@ -72,14 +74,25 @@ export const BlogCard = styled.div`
         height: 1px;
         background-color: rgba(0, 0, 0, 0.2);
     }
+
+    @media(max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 `;
 
 export const BlogCardTitle = styled.p`
     font-size: 16px;
     font-weight: 500;
     color: #222;
-    margin-top: 30px;
-    margin-bottom: 16px;
+    margin-top: 16px;
+    margin-bottom: 12px;
     line-height: 1.3;
     white-space: pre-line;
 `;
@@ -87,4 +100,28 @@ export const BlogCardTitle = styled.p`
 export const BlogCardDate = styled.span`
     font-size: 12px;
     color: #999;
+`;
+
+export const BlogMobileButton = styled.div`
+    display: none;
+
+    @media(max-width: 768px) {
+        display: block;
+        margin-top: 24px;
+
+        button {
+            width: 100%;
+            height: 44px;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            background: #f7f7f7;
+            border: 0.5px solid #d0d0d0;
+            cursor: pointer;
+
+            &:hover {
+                background: white;
+            }
+        }
+    }
 `;

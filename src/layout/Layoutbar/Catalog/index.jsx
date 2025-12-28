@@ -4,6 +4,7 @@ import {
     CatalogHeader,
     CatalogTitle,
     CatalogButton,
+    CatalogMobileButton,
     CatalogGrid,
     CatalogCard,
     CardTitle,
@@ -44,6 +45,11 @@ function Catalog() {
                     </CatalogCard>
                 ))}
             </CatalogGrid>
+
+            <CatalogMobileButton>
+                <button>Весь каталог →</button>
+            </CatalogMobileButton>
+
         </CatalogSection>
     );
 }

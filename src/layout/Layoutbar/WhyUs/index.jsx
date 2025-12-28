@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    WhyUsMobileButton,
     WhyUsSection,
     WhyUsHeader,
     WhyUsTitle,
@@ -44,7 +45,10 @@ function WhyUs() {
         <WhyUsSection>
             <WhyUsHeader>
                 <WhyUsTitle>Почему NORNLIGHT?</WhyUsTitle>
-                <WhyUsButton>О компании →</WhyUsButton>
+                <WhyUsButton className="desktop-button">
+                    О компании →
+                </WhyUsButton>
+
             </WhyUsHeader>
 
             <WhyUsGrid>
@@ -62,6 +66,10 @@ function WhyUs() {
                     );
                 })}
             </WhyUsGrid>
+
+            <WhyUsMobileButton>
+                <WhyUsButton>О компании →</WhyUsButton>
+            </WhyUsMobileButton>
         </WhyUsSection>
     );
 }

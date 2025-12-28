@@ -58,11 +58,40 @@ export const BannerWrapper = styled.section`
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
     text-align: center;
 
+    margin: 16px;
+    padding: 24px 16px;
+    border-radius: 24px;
+
+    .banner__content {
+      max-width: 100%;
+      text-align: left;
+      margin-left: -40px;
+
+      h2 {
+        font-size: 2rem;
+        line-height: 1.3;
+        padding-left: 0;
+
+        .highlight-text {
+          font-size: 2rem;
+          margin-top: 8px;
+        }
+      }
+    }
+
     .banner__image {
-      margin-top: 20px;
+      transform: none;
+      margin-bottom: 16px;
+
+      img {
+        width: 580px;
+        height: 380px;
+        margin-top: -59px;
+      }
     }
   }
 `;

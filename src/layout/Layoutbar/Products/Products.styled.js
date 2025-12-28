@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const ProductSection = styled.section`
     padding: 50px 225px;
+
+    @media (max-width: 768px) {
+        padding: 24px 16px;
+    }
 `;
 
 export const ProductHeader = styled.div`
@@ -26,12 +30,30 @@ export const ProductButton = styled.button`
     &:hover {
         background: #f5f5f5;
     }
+
+    &.desktop-button {
+        @media(max-width: 768px) {
+            display: none;
+        }
+    }
 `;
+
 
 export const ProductGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+
+    @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    & > * {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
 `;
 
 export const ProductCard = styled.div`
@@ -105,4 +127,29 @@ export const CartWrapper = styled.div`
 export const CartIcon = styled.img`
     width: 20px;
     height: 20px;
+`;
+
+export const ProductMobileButton = styled.div`
+    display: none;
+
+    @media(max-width: 768px) {
+    display: block;
+    margin-top: 36px;
+
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        height: 44px;
+        border-radius: 100px;
+        font-size: 16px;
+        font-weight: 600;
+        background: #f7f7f7;
+        border: 0.5px solid #d0d0d0;
+        cursor: pointer;
+
+        &:hover {
+            background: white;
+        }
+    }
+}
 `;

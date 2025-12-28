@@ -5,6 +5,7 @@ import like from '../../../components/icons/src/Product/like.svg';
 import savat from '../../../components/icons/src/Product/savat.svg';
 
 import {
+    ProductMobileButton,
     ProductSection,
     ProductHeader,
     ProductTitle,
@@ -32,25 +33,27 @@ function Products() {
         <ProductSection>
             <ProductHeader>
                 <ProductTitle>Популярные товары</ProductTitle>
-                <ProductButton>Все товары →</ProductButton>
+                <ProductButton className="desktop-button">Все товары →</ProductButton>
             </ProductHeader>
 
             <ProductGrid>
-                {products.map((item, index) => {
-                    return (
-                        <ProductCard key={index}>
-                            <LikeIcon src={like} alt="Like" />
-                            <ProductImage src={item.img} alt={item.name} />
-                            <ProductName>{item.name}</ProductName>
-                            <ProductOldPrice>{item.oldPrice}</ProductOldPrice>
-                            <ProductNewPrice>{item.newPrice}</ProductNewPrice>
-                            <CartWrapper>
-                                <CartIcon src={savat} alt="Add to cart" />
-                            </CartWrapper>
-                        </ProductCard>
-                    );
-                })}
+                {products.map((item, index) => (
+                    <ProductCard key={index}>
+                        <LikeIcon src={like} alt="Like" />
+                        <ProductImage src={item.img} alt={item.name} />
+                        <ProductName>{item.name}</ProductName>
+                        <ProductOldPrice>{item.oldPrice}</ProductOldPrice>
+                        <ProductNewPrice>{item.newPrice}</ProductNewPrice>
+                        <CartWrapper>
+                            <CartIcon src={savat} alt="Add to cart" />
+                        </CartWrapper>
+                    </ProductCard>
+                ))}
             </ProductGrid>
+
+            <ProductMobileButton>
+                <ProductButton>Все товары →</ProductButton>
+            </ProductMobileButton>
         </ProductSection>
     );
 }

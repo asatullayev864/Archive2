@@ -9,7 +9,7 @@ import {
 
 import { NavMainWrapper, SearchWrapper, NavigationItems } from './NavbarMain.styled';
 
-function NavbarMain(props) {
+function NavbarMain() {
     return (
         <NavMainWrapper>
             <img src="/logo.svg" alt="Logo" />

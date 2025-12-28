@@ -3,6 +3,10 @@ import { bgColors } from '../../../theme';
 
 export const CatalogSection = styled.section`
     padding: 50px 225px;
+
+    @media (max-width: 768px) {
+        padding: 24px 16px;
+    }
 `;
 
 export const CatalogHeader = styled.div`
@@ -10,6 +14,12 @@ export const CatalogHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
 `;
 
 export const CatalogTitle = styled.h2`
@@ -27,12 +37,25 @@ export const CatalogButton = styled.button`
     &:hover {
         background: #f5f5f5;
     }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const CatalogGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        & > *:nth-child(n + 3) {
+        display: none;
+        }
+    }
 `;
 
 export const CatalogCard = styled.div`
@@ -50,6 +73,11 @@ export const CatalogCard = styled.div`
     &:hover {
         transform: scale(1.05); // 5 foiz kattalashadi
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); // yumshoq soya
+    }
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 16px;
     }
 `;
 
@@ -70,3 +98,26 @@ export const CardPrice = styled.span`
   color: #777;
 `;
 
+export const CatalogMobileButton = styled.div`
+    display: none;
+
+    @media(max-width: 768px) {
+        display: block;
+        margin-top: 30px;
+
+        button {
+            width: 100%;
+            height: 44px;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            background: white;
+            border: 0.5px solid #d0d0d0;
+            cursor: pointer;
+
+            &:hover {
+                background: #f7f7f7;
+            }
+        }
+    }
+`;
