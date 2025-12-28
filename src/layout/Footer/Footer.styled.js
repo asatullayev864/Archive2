@@ -30,7 +30,7 @@ export const FooterColumn = styled.div`
     }
 
     a {
-        font-size: 14px; /* kattaroq link */
+        font-size: 14px;
         color: #222;
         text-decoration: none;
 
@@ -41,7 +41,7 @@ export const FooterColumn = styled.div`
 
     @media(max-width: 768px) {
         h4 {
-            font-size: 28px; /* mobile-da ham kattaroq */
+            font-size: 28px;
         }
 
         a {
