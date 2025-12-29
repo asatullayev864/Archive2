@@ -44,6 +44,9 @@ export const WhyUsButton = styled.button`
     background: white;
     cursor: pointer;
 
+    text-decoration: none;
+    color: inherit;
+
     &:hover {
         background: #f5f5f5;
     }

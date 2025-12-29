@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const BlogSection = styled.section`
-    padding: 50px 225px;
+    padding: 55px 225px;
+    margin-top: 50px;
+    margin-bottom: 15px;
 
     @media(max-width: 768px) {
         padding: 24px 16px;
@@ -41,12 +42,9 @@ export const BlogGrid = styled.div`
     @media(max-width: 768px) {
         grid-template-columns: 1fr;
         gap: 16px;
-
-        & > *:not(:first-child) {
-            display: none;
-        }
     }
 `;
+
 
 export const BlogCard = styled.div`
     position: relative;
@@ -109,26 +107,59 @@ export const BlogMobileButton = styled.div`
     @media(max-width: 768px) {
         display: block;
         margin-top: 24px;
+
+        button {
+            width: 100%;
+            height: 44px;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 600;
+            background: #f7f7f7;
+            border: 0.5px solid #d0d0d0;
+            cursor: pointer;
+
+            &:hover {
+                background: white;
+            }
+        }
     }
 `;
 
-export const BlogButtonLink = styled(Link)`
-    display: inline-block;
+export const BlogButton = styled.button`
     padding: 10px 18px;
     border-radius: 24px;
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
     font-weight: 400;
-    text-decoration: none;
-    color: #222;
-    text-align: center;
 
     &:hover {
         background: #f5f5f5;
     }
 
-    @media(max-width: 768px) {
-        width: 100%;
+    &.desktop-button {
+        @media(max-width: 768px) {
+            display: none;
+        }
     }
+`;
+
+export const Breadcrumbs = styled.div`
+  font-size: 13px;
+  color: #9a9a9a;
+  margin-bottom: 24px;
+`;
+
+export const CrumbLink = styled.span`
+  cursor: pointer;
+  color: #9a9a9a;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const CrumbCurrent = styled.span`
+  color: #454545;
+  font-weight: 500;
 `;

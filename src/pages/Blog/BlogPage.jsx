@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import blog1 from '../../../components/icons/src/Blog/blog1.svg';
-import blog2 from '../../../components/icons/src/Blog/blog2.svg';
-import blog3 from '../../../components/icons/src/Blog/blog3.svg';
+import blog1 from '../../components/icons/src/Blog/blog1.svg';
+import blog2 from '../../components/icons/src/Blog/blog2.svg';
+import blog3 from '../../components/icons/src/Blog/blog3.svg';
 
 import {
     BlogSection,
@@ -13,23 +13,34 @@ import {
     BlogCardTitle,
     BlogCardDate,
     BlogGrid,
-    BlogMobileButton,
-    BlogButtonLink
-} from './Blog.styled';
+    Breadcrumbs,
+    CrumbLink,
+    CrumbCurrent
+} from './BlogPage.styled';
 
-function Blog() {
+function BlogPage() {
     const blogItems = [
         { img: blog1, title: "Как правильно освещать дом\nснаружи?", date: "01.01.2024" },
         { img: blog2, title: "Как правильно освещать дом\nснаружи?", date: "01.01.2024" },
         { img: blog3, title: "Как правильно освещать дом\nснаружи?", date: "01.01.2024" },
+        { img: blog1, title: "Как правильно освещать дом\nснаружи?", date: "02.01.2024" },
+        { img: blog2, title: "Как правильно освещать дом\nснаружи?", date: "02.01.2024" },
+        { img: blog3, title: "Как правильно освещать дом\nснаружи?", date: "02.01.2024" },
     ];
+
 
     return (
         <BlogSection>
+            <Breadcrumbs>
+                <CrumbLink as={Link} to="/">Главная</CrumbLink>
+                <span> &gt; </span>
+                <CrumbCurrent>Блог</CrumbCurrent>
+            </Breadcrumbs>
+            
             <BlogHeader>
                 <BlogTitle>Блог</BlogTitle>
-                <BlogButtonLink to="/blog">Перейти в блог →</BlogButtonLink>
             </BlogHeader>
+
 
             <BlogGrid>
                 {blogItems.map((item, index) => (
@@ -40,12 +51,8 @@ function Blog() {
                     </BlogCard>
                 ))}
             </BlogGrid>
-
-            <BlogMobileButton>
-                <BlogButtonLink to="/blog">Перейти в блог →</BlogButtonLink>
-            </BlogMobileButton>
         </BlogSection>
     );
 }
 
-export default Blog;
+export default BlogPage;

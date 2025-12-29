@@ -28,19 +28,17 @@ export const CrumbCurrent = styled.span`
   font-weight: 500;
 `;
 
-/* GRID */
 export const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 48px;
-  align-items: start; /* MUHIM */
+  align-items: start;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `;
 
-/* CHAP */
 export const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,7 +76,7 @@ export const InfoText = styled.div`
 
 /* ONG */
 export const TextColumn = styled.div`
-  padding-top: 0; /* sarlavha bilan bir chiziqda */
+  padding-top: 0;
 `;
 
 export const Description = styled.p`

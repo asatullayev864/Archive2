@@ -25,7 +25,6 @@ function AboutPage() {
     <>
       <PageWrapper>
 
-        {/* BREADCRUMB */}
         <Breadcrumbs>
           <CrumbLink as={Link} to="/">Главная</CrumbLink>
           <span> &gt; </span>
@@ -33,7 +32,6 @@ function AboutPage() {
         </Breadcrumbs>
 
         <AboutGrid>
-          {/* CHAP TOMON */}
           <LeftColumn>
             <PageTitle>О компании</PageTitle>
 

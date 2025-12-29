@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ProductSection = styled.section`
     padding: 50px 225px;
+    margin-top: 150px;
+    margin-bottom: 700px;
 
     @media (max-width: 768px) {
         padding: 24px 16px;
@@ -26,9 +29,6 @@ export const ProductButton = styled.button`
     border: 1px solid #ccc;
     background: white;
     cursor: pointer;
-
-    text-decoration: none;
-    color: inherit;
 
     &:hover {
         background: #f5f5f5;
@@ -68,6 +68,9 @@ export const ProductCard = styled.div`
     padding: 12px;
     border-radius: 8px;
     background: #fff;
+
+    text-decoration: none;
+    color: inherit;
 
     // animatsiya uchun
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -155,4 +158,29 @@ export const ProductMobileButton = styled.div`
         }
     }
 }
+`;
+
+export const ProductBreadcrumb = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-size: 14px;
+`;
+
+export const BreadcrumbLink = styled(Link)`
+    color: #9a9a9a;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: #454545;
+        text-decoration: underline;
+    }
+`;
+
+export const BreadcrumbSeparator = styled.span`
+    color: #454545;
+    font-weight: 500;
 `;
