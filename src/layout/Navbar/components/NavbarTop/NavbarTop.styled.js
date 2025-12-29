@@ -19,6 +19,10 @@ export const CustomNavLink = styled(NavLink)`
     font-weight: 600;
     text-decoration: none;
     color: ${textColors.secondary};
+
+    &.active {
+    color: ${textColors.primary};
+    }
 `;
 
 export const OrderPhoneButton = styled.button`

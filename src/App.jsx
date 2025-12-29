@@ -7,6 +7,9 @@ import About from './pages/WhyUs/WhyUs';
 import ProductPage from './pages/Products/ProductsPage';
 import ProductDetail from './pages/Products/ProductDetail';
 import BlogPage from './pages/Blog/BlogPage';
+import DeliveryPayment from './pages/DeliverPayment/DeliveryPayment';
+import ReturnPage from './pages/Return/ReturnPage';
+import GuaranteesPage from './pages/Guarantees/GuaranteesPage';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="products" element={<ProductPage />} />
         <Route path="products/:id" element={<ProductDetail />} />
         <Route path="blog" element={<BlogPage />} />
+        <Route path="delivery-payment" element={<DeliveryPayment />} />
+        <Route path="return" element={< ReturnPage />} />
+        <Route path="guarantees" element={<GuaranteesPage/>} />
 
       </Route>
     </Routes>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { NavLink } from "react-router-dom";
+
 import NavbarTop from './components/NavbarTop';
 import NavbarMain from './components/NavbarMain';
 import vector from '../../components/icons/src/Navbar/Vector.svg';
@@ -24,11 +26,11 @@ function Navbar() {
 
             <div className="container mobile-content">
                 <div className="mobile-top">
-                    <button className="burger" onClick={() => setOpen(true)}> <img src={ vector } alt="menu" /> </button>
+                    <button className="burger" onClick={() => setOpen(true)}> <img src={vector} alt="menu" /> </button>
                     <img src="/logo.svg" alt="Logo" />
                     <div className="mobile-icons">
                         <HeartIcon />
-                        <NetworkIcon className="hide-mobile"/>
+                        <NetworkIcon className="hide-mobile" />
                         <CartIcon />
                     </div>
                 </div>
@@ -41,14 +43,6 @@ function Navbar() {
                 <div className={`mobile-menu ${open ? 'open' : ''}`}>
                     <button className="close" onClick={() => setOpen(false)}>✕</button>
 
-                    <nav className="mobile-links">
-                        <a href="/">О компании</a>
-                        <a href="/">Доставка и оплата</a>
-                        <a href="/">Возврат</a>
-                        <a href="/">Гарантии</a>
-                        <a href="/">Контакты</a>
-                        <a href="/">Блог</a>
-                    </nav>
 
                     <button className="catalog-btn">Каталог</button>
 
