@@ -15,8 +15,8 @@ function NavbarTop() {
         <CustomNavLink to="/delivery-payment">Доставка и оплата</CustomNavLink>
         <CustomNavLink to="/return">Возврат</CustomNavLink>
         <CustomNavLink to="/guarantees">Гарантии</CustomNavLink>
-        <CustomNavLink to="/">Контакты</CustomNavLink>
-        <CustomNavLink to="/">Блог</CustomNavLink>
+        <CustomNavLink to="/contacts">Контакты</CustomNavLink>
+        <CustomNavLink to="/blog">Блог</CustomNavLink>
       </NavTopSide>
 
       <NavTopSide>

@@ -10,6 +10,7 @@ import BlogPage from './pages/Blog/BlogPage';
 import DeliveryPayment from './pages/DeliverPayment/DeliveryPayment';
 import ReturnPage from './pages/Return/ReturnPage';
 import GuaranteesPage from './pages/Guarantees/GuaranteesPage';
+import ContactsPage from './pages/Contacts/ContactsPage';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
         <Route path="blog" element={<BlogPage />} />
         <Route path="delivery-payment" element={<DeliveryPayment />} />
         <Route path="return" element={< ReturnPage />} />
-        <Route path="guarantees" element={<GuaranteesPage/>} />
+        <Route path="guarantees" element={<GuaranteesPage />} />
+        <Route path="contacts" element={<ContactsPage />} />
 
       </Route>
     </Routes>
